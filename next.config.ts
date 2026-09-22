@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, // Required for static export if using <Image />
   },
+  basePath: '/afrina-portfolio', 
 };
 
 export default nextConfig;
