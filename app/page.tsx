@@ -48,7 +48,28 @@ const skills: Skill[] = [
   },
 ];
 
+const basePath = "/afrina-portfolio";
+
 const projectMockups: Record<number, ProjectData> = {
+  0: {
+    desktop: `${basePath}/1.png`,
+    url: "https://ptg.melaka.gov.my/portal/ms/",
+  },
+  1: {
+    desktop: `${basePath}/2.png`,
+    url: "https://ipoh.mboutiquehotels.com/",
+  },
+  2: {
+    desktop: `${basePath}/3.png`,
+    url: "https://www.ellarockqueen.com/",
+  },
+  3: {
+    desktop: `${basePath}/4.png`,
+    url: "https://vcyberiz.com/",
+  },
+};
+
+{/*const projectMockups: Record<number, ProjectData> = {
   0: {
     desktop: "/src/1.png",
     url: "https://ptg.melaka.gov.my/portal/ms/",
@@ -65,7 +86,7 @@ const projectMockups: Record<number, ProjectData> = {
     desktop: "/src/4.png",
     url: "https://vcyberiz.com/",
   },
-};
+};*/}
 
 export default function Page() {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
@@ -242,7 +263,8 @@ export default function Page() {
             <div className="hero-intro__visual reveal">
               <div className="dotted-circle" id="dottedCircle" ref={dottedCircleRef}></div>
               <div className="portrait-container">
-                <img src="/src/afrina2.png" alt="Mirza Afrina" className="hero-portrait" />
+              <img src={`${basePath}/afrina2.png`} alt="Mirza Afrina" className="hero-portrait" />
+               {/*<img src="/src/afrina2.png" alt="Mirza Afrina" className="hero-portrait" />*/}
               </div>
               <div className="floating-badge floating-badge--2">
                 ✨ Liferay, WP & Front-end Developer

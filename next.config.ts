@@ -1,11 +1,10 @@
-import type { NextConfig } from 'next';
-
-const nextConfig: NextConfig = {
-  output: 'export', // Tells Next.js to export static HTML/CSS/JS
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
   images: {
-    unoptimized: true, // Required for static export if using <Image />
+    unoptimized: true,
   },
-  basePath: '/afrina-portfolio', 
+  basePath: '/afrina-portfolio',
 };
 
-export default nextConfig;
+module.exports = nextConfig;
